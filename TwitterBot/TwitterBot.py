@@ -13,6 +13,10 @@ ACCESS_SECRET   = ''
 
 api = Twython(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_KEY,ACCESS_SECRET) 
 
-api.update_status(status=sys.argv[1])
+if sys.argv[1] != None:
+	tweet = sys.argv[1]
+else:
+	tweet = "It's a long way to the top, if you wanna Rock'N'Roll"
+api.update_status(status=)
 
 # TO BE CONTINUED
